@@ -17,7 +17,7 @@ For you it is enough to know the following aspects:
 This repo provides a quickstart in Flink. The use case is the processing of a log stream resulting from users downloading content from a website.
 The goal is to count the number of downloads per user on a certain time span, in order to spot potentially fraudolent behavior.
 Let's indeed assume a data scientist in our team has already previously explored a dataset collected in the same way, has computed the typical number of assets downloaded by users, and calculated a cumulative distribution function on that.
-At that point, he gave us, data engineers the decision boundary for which we users can be considered behaving fraudolently.
+At that point, he gave us, data engineers the decision boundary (based on the CDF quantiles) for which users can be considered behaving fraudolently.
 
 The Flink topology will therefore:
 * open an input stream from Kafka to retrieve event logs
